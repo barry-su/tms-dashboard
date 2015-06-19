@@ -1,0 +1,3 @@
+^/\*\*$
+^ \* Copyright \(c\) \d\d\d\d(-\d\d\d\d)? All Rights Reserved, ROAM Data, Inc.$
+^ \*/$

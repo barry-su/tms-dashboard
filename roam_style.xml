@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<!DOCTYPE module PUBLIC
+        "-//Puppy Crawl//DTD Check Configuration 1.3//EN"
+        "http://www.puppycrawl.com/dtds/configuration_1_3.dtd">
+
+<module name="Checker">
+    <module name="FileTabCharacter">
+        <property name="eachLine" value="true"/>
+    </module>
+    <module name="RegexpHeader">
+        <property name="headerFile" value="roam_header.txt" />
+    </module>
+    <module name="TreeWalker">
+        <module name="AvoidStarImport"/>
+        <module name="LocalVariableName" />
+        <module name="EmptyStatement"/>
+        <module name="LeftCurly"/>
+        <module name="MethodName" />
+        <module name="MethodParamPad"/>
+        <module name="MissingSwitchDefault"/>
+        <module name="NeedBraces"/>
+        <module name="NoWhitespaceBefore"/>
+        <module name="ParameterName"/>
+        <module name="ParenPad"/>
+        <module name="StringLiteralEquality"/>
+        <module name="RightCurly"/>
+        <module name="TypeName" />
+        <module name="WhitespaceAfter"/>
+    </module>
+    <module name="SuppressionFilter">
+        <property name="file" value="roam_style_suppression.xml" />
+    </module>
+</module>

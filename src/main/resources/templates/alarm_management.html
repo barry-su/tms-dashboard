@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="utf-8" />
+<title th:text="#{alarm.management.title}"></title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="description" content="" />
+<meta name="author" content="" />
+
+<!--link rel="stylesheet/less" href="less/bootstrap.less" type="text/css" /-->
+<!--link rel="stylesheet/less" href="less/responsive.less" type="text/css" /-->
+<!--script src="js/less-1.3.3.min.js"></script-->
+<!--append ‘#!watch’ to the browser URL, then refresh the page. -->
+
+<link th:href="@{/css/bootstrap/css/bootstrap.min.css}" rel="stylesheet" />
+<link th:href="@{/css/bootstrap/css/style.css}" rel="stylesheet" />
+
+<!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+<!--[if lt IE 9]>
+    <script src="js/html5shiv.js"></script>
+  <![endif]-->
+
+<script src="jquery.min.js" th:src="@{/css/bootstrap/js/jquery.min.js}"></script>
+  <script src="bootstrap.min.js" th:src="@{/css/bootstrap/js/bootstrap.min.js}"></script>
+  <script src="scripts.js" th:src="@{/css/bootstrap/js/scripts.js}"></script>
+
+<!--  PAGINATION plugin -->
+<link type="text/css" th:href="@{/js/pagination/css/jquery.bs_pagination.min.css}" rel="stylesheet" />
+<script src="jquery.bs_pagination.min.js" th:src="@{/js/pagination/js/jquery.bs_pagination.min.js}"></script>
+<script src="page_total.js" th:src="@{/js/pagination/js/page_total.js}"></script>
+<script src="en.min.js" th:src="@{/js/pagination/localization/en.min.js}"></script>
+</head>
+
+<body>
+	<div class="container">
+		<div class="row clearfix">
+		<h3 th:text="#{alarm.management.title}"></h3>
+			<div class="col-md-11 column">
+				<table class="table table-bordered">
+					<thead>
+						<tr>
+							<th width="10%" th:text="#{alarm.management.selected}"></th>
+							<th width="20%" th:text="#{alarm.management.alarmname}"></th>
+							<th width="10%" th:text="#{alarm.management.type}"></th>
+							<th width="15%" th:text="#{alarm.management.frequency}"></th>
+							<th width="20%" th:text="#{alarm.management.sponsor}"></th>
+							<th width="15%" th:text="#{alarm.management.status}"></th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr class="success">
+							<td><input type="checkbox" /></td>
+							<td>Name1</td>
+							<td>HB</td>
+							<td>1min</td>
+							<td>Custom1</td>
+							<td>Active</td>
+						</tr>
+						<tr>
+							<td><input type="checkbox" /></td>
+							<td>Name1</td>
+							<td>HB</td>
+							<td>1min</td>
+							<td>Custom1</td>
+							<td>Active</td>
+						</tr>
+						<tr class="success">
+							<td><input type="checkbox" /></td>
+							<td>Name1</td>
+							<td>HB</td>
+							<td>1min</td>
+							<td>Custom1</td>
+							<td>Active</td>
+						</tr>
+						<tr>
+							<td><input type="checkbox" /></td>
+							<td>Name1</td>
+							<td>HB</td>
+							<td>1min</td>
+							<td>Custom1</td>
+							<td>Active</td>
+						</tr>
+						<tr class="success">
+							<td><input type="checkbox" /></td>
+							<td>Name1</td>
+							<td>HB</td>
+							<td>1min</td>
+							<td>Custom1</td>
+							<td>Active</td>
+						</tr>
+						<tr>
+							<td><input type="checkbox" /></td>
+							<td>Name1</td>
+							<td>HB</td>
+							<td>1min</td>
+							<td>Custom1</td>
+							<td>Active</td>
+						</tr>
+						<tr class="success">
+							<td><input type="checkbox" /></td>
+							<td>Name1</td>
+							<td>HB</td>
+							<td>1min</td>
+							<td>Custom1</td>
+							<td>Active</td>
+						</tr>
+						<tr>
+							<td><input type="checkbox" /></td>
+							<td>Name1</td>
+							<td>HB</td>
+							<td>1min</td>
+							<td>Custom1</td>
+							<td>Active</td>
+						</tr>
+						<tr class="success">
+							<td><input type="checkbox" /></td>
+							<td>Name1</td>
+							<td>HB</td>
+							<td>1min</td>
+							<td>Custom1</td>
+							<td>Active</td>
+						</tr>
+						<tr>
+							<td><input type="checkbox" /></td>
+							<td>Name1</td>
+							<td>HB</td>
+							<td>1min</td>
+							<td>Custom1</td>
+							<td>Active</td>
+						</tr>
+					</tbody>
+				</table>
+				<div id="page1"></div>
+			</div>
+			<div class="col-md-1 column" style="top:100px">
+				<a href="#" class="btn btn-danger btn-block" type="button" th:text="#{alarm.management.btn_add}"></a>
+				<a href="#" class="btn btn-danger btn-block" type="button" th:text="#{alarm.management.btn_edit}"></a>
+				<a href="#" class="btn btn-danger btn-block" type="button" th:text="#{alarm.management.btn_delete}"></a>
+				<a href="#" class="btn btn-danger btn-block" type="button" th:text="#{alarm.management.btn_active}"></a>
+				<a href="#" class="btn btn-danger btn-block" type="button" th:text="#{alarm.management.btn_deactive}"></a>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

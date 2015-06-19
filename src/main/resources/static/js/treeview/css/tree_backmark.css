@@ -1,0 +1,16 @@
+@CHARSET "UTF-8";
+
+.badge {
+	display: inline-block;
+	min-width: 10px;
+	padding: 1px 2px;
+	font-size: 17px;
+	font-weight: bold;
+	line-height: 1;
+	color: #fff;
+	text-align: center;
+	white-space: nowrap;
+	vertical-align: baseline;
+	background-color: black;
+	border-radius: 10px
+}

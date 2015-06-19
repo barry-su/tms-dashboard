@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="utf-8" />
+<title th:text="#{alarm.creation.title}"></title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="description" content="" />
+<meta name="author" content="" />
+
+<!--link rel="stylesheet/less" href="less/bootstrap.less" type="text/css" /-->
+<!--link rel="stylesheet/less" href="less/responsive.less" type="text/css" /-->
+<!--script src="js/less-1.3.3.min.js"></script-->
+<!--append ‘#!watch’ to the browser URL, then refresh the page. -->
+
+<link th:href="@{/css/bootstrap/css/bootstrap.min.css}" rel="stylesheet" />
+<link type="text/css" th:href="@{/js/bootstrap-select/css/bootstrap-select.min.css}" rel="stylesheet" />
+<link th:href="@{/css/bootstrap/css/style.css}" rel="stylesheet" />
+
+<!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+<!--[if lt IE 9]>
+    <script src="js/html5shiv.js"></script>
+  <![endif]-->
+
+<script src="jquery.min.js" th:src="@{/css/bootstrap/js/jquery.min.js}"></script>
+<script src="bootstrap.min.js" th:src="@{/css/bootstrap/js/bootstrap.min.js}"></script>
+<script src="scripts.js" th:src="@{/css/bootstrap/js/scripts.js}"></script>
+<script src="bootstrap-select.min.js" th:src="@{/js/bootstrap-select/js/bootstrap-select.min.js}"></script>
+</head>
+
+<body>
+	<div class="container">
+	<div class="row clearfix">
+		<div class="col-md-12 column">
+			<form class="form-horizontal" role="form">
+			<fieldset>
+			<legend contenteditable="false" th:text="#{alarm.creation.title}"></legend>
+				<div class="form-group">
+					 <label for="inputAlarmName" class="col-md-2 control-label" th:text="#{alarm.common.name}"></label>
+					<div class="col-md-3">
+						<input type="text" class="form-control" id="inputAlarmName" />
+					</div>
+				</div>
+				<div class="form-group">
+				<label for="inputEventTrack" class="col-md-2 control-label" th:text="#{alarm.common.eventtrack}"></label>
+				<div class="col-md-3">
+				<select class="form-control selectpicker">
+				  <option>Threshold on ration...</option>
+				  <option>Threshold on "low memory"...</option>
+				  <option>Threshold on "MSR reads"...</option>
+				</select>
+                </div>
+                </div>
+                <div class="form-group">
+				<label for="inputWindowAlarm" class="col-md-2 control-label" th:text="#{alarm.common.windowalarm}"></label>
+				<div class="col-md-2">
+                <select class="form-control selectpicker">
+				  <option>0-24,Mon-Fri</option>
+				  <option>18-22,Sat-Sun</option>
+				</select>
+                </div>
+                </div>
+                <div class="form-group">
+				<label for="inputInfo" class="col-md-2 control-label" th:text="#{alarm.common.info}"></label>
+				<div class="col-md-2">
+				<select class="form-control selectpicker">
+				  <option>1 min</option>
+				  <option>1 min</option>
+				  <option>2 min</option>
+				  <option>3 min</option>
+				</select>
+                </div>
+                </div>
+                <div class="form-group">
+				<label for="inputMinor" class="col-md-2 control-label" th:text="#{alarm.common.minor}"></label>
+				<div class="col-md-2">
+				<select class="form-control selectpicker">
+				  <option>1 min</option>
+				  <option>1 min</option>
+				  <option>2 min</option>
+				  <option>3 min</option>
+				</select>
+                </div>
+                </div>
+                <div class="form-group">
+				<label for="inputMajor" class="col-md-2 control-label" th:text="#{alarm.common.major}"></label>
+				<div class="col-md-2">
+				<select class="form-control selectpicker">
+				  <option>1 min</option>
+				  <option>1 min</option>
+				  <option>2 min</option>
+				  <option>3 min</option>
+				</select>
+                </div>
+                </div>
+                <div class="form-group">
+				<label for="inputFrequency" class="col-md-2 control-label" th:text="#{alarm.common.frequency}"></label>
+				<div class="col-md-2">
+				<select class="form-control selectpicker">
+				  <option>1 min</option>
+				  <option>1 hour</option>
+				  <option>once a day</option>
+				</select>
+                </div>
+                </div>
+				<div class="form-group">
+				 <label for="inputAlertRecipient" class="col-md-2 control-label" th:text="#{alarm.common.alertrecipient}"></label>
+				 <div class="col-md-4">
+				 <div class="has-success">
+				  <div class="checkbox">
+				    <label>
+				      <input type="checkbox" id="sms" value="option1" />
+				      <span th:text="#{alarm.common.sms}"></span>
+				    </label>
+				  </div>
+				</div>
+				<div>
+				  	<input class="form-control" type="text" id="smsInput" />
+				  </div>
+				<div class="has-warning">
+				  <div class="checkbox">
+				    <label>
+				      <input type="checkbox" id="email" value="option1" />
+				      <span th:text="#{alarm.common.email}"></span>
+				    </label>
+				  </div>
+				</div>
+				<div>
+				  	<input class="form-control" type="text" id="emailInput" />
+				  </div>
+						<!--
+						<div class="checkbox">
+						 
+						<input class="col-md-9 form-control" type="text" id="sms" />
+						<input class="col-md-9 form-control" type="text" id="email" />
+							 <label class="col-md-3 control-label"><input type="checkbox" />SMS</label>
+							 <label class="col-md-3 control-label"><input type="checkbox" />Email</label>
+						</div>
+						 -->
+				</div>
+				</div>
+				<div class="form-group">
+					 <label for="radio123" class="col-md-2 control-label"></label>
+					<div class="col-md-10">
+						<label class="radio-inline">
+						  <input type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1" checked="checked" /> Active
+						</label>
+						<label class="radio-inline">
+						  <input type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2" /> Deactive
+						</label>
+					</div>
+				</div>
+				<div class="form-group">
+					<div class="col-md-offset-2 col-md-10">
+						 <button type="submit" class="btn btn-primary" th:text="#{dashboard.common.submit}"></button>&nbsp;&nbsp;&nbsp;
+						 <button class="btn btn-default" th:text="#{dashboard.common.cancel}"></button>
+					</div>
+				</div>
+				</fieldset>
+			</form>
+		</div>
+	</div>
+</div>
+</body>
+</html>
